@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VKCheckboxExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKCheckbox Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ2-Zv-dou">
+                                <rect key="frame" x="20" y="28" width="560" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Uec-fK-H7i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-BN-MuI">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.5568627451" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CKP-mG-X5z"/>
+                                    <constraint firstAttribute="width" constant="200" id="rVf-mH-cam"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rVf-mH-cam"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O6X-I1-WRq"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOZ-KB-SY4">
+                                <rect key="frame" x="20" y="86" width="560" height="219"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic checkbox:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elU-gp-EUF">
+                                        <rect key="frame" x="185.5" y="94" width="150" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="pJp-Tl-dKx"/>
+                                            <constraint firstAttribute="width" constant="150" id="tS4-PF-0VC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-Sa-9yn" customClass="VKCheckbox" customModule="VKCheckboxExample" customModuleProvider="target">
+                                        <rect key="frame" x="347.5" y="93.5" width="32" height="32"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Zih-yS-pVT"/>
+                                            <constraint firstAttribute="width" constant="32" id="mFA-tP-YfS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="elU-gp-EUF" firstAttribute="centerX" secondItem="eOZ-KB-SY4" secondAttribute="centerX" constant="-20" id="Pux-3u-iPO"/>
+                                    <constraint firstItem="elU-gp-EUF" firstAttribute="centerY" secondItem="eOZ-KB-SY4" secondAttribute="centerY" id="XTk-kD-sFw"/>
+                                    <constraint firstItem="0ep-Sa-9yn" firstAttribute="leading" secondItem="elU-gp-EUF" secondAttribute="trailing" constant="12" id="dVu-Ta-IKp"/>
+                                    <constraint firstItem="0ep-Sa-9yn" firstAttribute="centerY" secondItem="elU-gp-EUF" secondAttribute="centerY" id="iDJ-R6-7Ym"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soB-xg-WHx">
+                                <rect key="frame" x="0.0" y="305" width="600" height="219"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom checkbox:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJC-6S-ywi">
+                                        <rect key="frame" x="180" y="98.5" width="180" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="cAC-Nu-MlF"/>
+                                            <constraint firstAttribute="height" constant="21" id="wSV-pL-uQ7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnA-90-L8d" customClass="VKCheckbox" customModule="VKCheckboxExample" customModuleProvider="target">
+                                        <rect key="frame" x="368" y="83.5" width="52" height="52"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="TyN-b5-eM4"/>
+                                            <constraint firstAttribute="height" constant="52" id="nUZ-oB-M0m"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="SJC-6S-ywi" firstAttribute="centerX" secondItem="soB-xg-WHx" secondAttribute="centerX" constant="-30" id="53r-yr-exD"/>
+                                    <constraint firstItem="rnA-90-L8d" firstAttribute="leading" secondItem="SJC-6S-ywi" secondAttribute="trailing" constant="8" id="Xmy-rB-ply"/>
+                                    <constraint firstItem="SJC-6S-ywi" firstAttribute="centerY" secondItem="soB-xg-WHx" secondAttribute="centerY" id="trc-eA-251"/>
+                                    <constraint firstItem="rnA-90-L8d" firstAttribute="centerY" secondItem="SJC-6S-ywi" secondAttribute="centerY" id="yT0-tQ-phN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qf-AO-lVF">
+                                <rect key="frame" x="20" y="78" width="560" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="f9o-OP-U85"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="soB-xg-WHx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3JU-jk-6f8"/>
+                            <constraint firstItem="soB-xg-WHx" firstAttribute="top" secondItem="eOZ-KB-SY4" secondAttribute="bottom" id="EIJ-jz-8V4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aPa-BN-MuI" secondAttribute="bottom" constant="20" id="JxU-M0-TKJ"/>
+                            <constraint firstItem="gQ2-Zv-dou" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Lbw-hT-ypE"/>
+                            <constraint firstItem="6qf-AO-lVF" firstAttribute="top" secondItem="gQ2-Zv-dou" secondAttribute="bottom" constant="8" id="Ln4-8l-QNi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gQ2-Zv-dou" secondAttribute="leading" id="MOf-f1-ub4"/>
+                            <constraint firstItem="aPa-BN-MuI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1c-YY-lkb"/>
+                            <constraint firstItem="6qf-AO-lVF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T1Q-e1-4ti"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gQ2-Zv-dou" secondAttribute="trailing" id="VqI-kv-Tl1"/>
+                            <constraint firstItem="aPa-BN-MuI" firstAttribute="top" secondItem="soB-xg-WHx" secondAttribute="bottom" constant="16" id="W51-19-p1m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6qf-AO-lVF" secondAttribute="trailing" id="Yp6-Av-w9L"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eOZ-KB-SY4" secondAttribute="leading" id="fvA-M4-K42"/>
+                            <constraint firstItem="aPa-BN-MuI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g29-Tc-U28"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eOZ-KB-SY4" secondAttribute="trailing" id="gd9-Ou-WpY"/>
+                            <constraint firstItem="eOZ-KB-SY4" firstAttribute="height" secondItem="soB-xg-WHx" secondAttribute="height" id="lfQ-m4-i8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="soB-xg-WHx" secondAttribute="trailing" constant="-20" id="qbg-49-anX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aPa-BN-MuI" secondAttribute="trailing" id="vPA-KW-VkM"/>
+                            <constraint firstItem="eOZ-KB-SY4" firstAttribute="top" secondItem="gQ2-Zv-dou" secondAttribute="bottom" constant="16" id="zln-Qu-X1G"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Q1c-YY-lkb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="checkbox" destination="0ep-Sa-9yn" id="dNT-5O-qL9"/>
+                        <outlet property="customCheckbox" destination="rnA-90-L8d" id="mgb-mI-sJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="243"/>
+        </scene>
+    </scenes>
+</document>
