@@ -28,7 +28,7 @@ import UIKit
 
 typealias CheckboxValueChangedBlock = (isOn: Bool) -> Void
 
-enum VKCheckboxLine
+@objc enum VKCheckboxLine: Int
 {
     case Normal
     case Thin

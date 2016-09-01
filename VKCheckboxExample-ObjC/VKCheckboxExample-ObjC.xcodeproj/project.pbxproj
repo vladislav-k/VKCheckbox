@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86BACC2E1D789B7400224971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BACC2D1D789B7400224971 /* main.m */; };
+		86BACC311D789B7400224971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BACC301D789B7400224971 /* AppDelegate.m */; };
+		86BACC341D789B7400224971 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BACC331D789B7400224971 /* ViewController.m */; };
+		86BACC371D789B7400224971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BACC351D789B7400224971 /* Main.storyboard */; };
+		86BACC391D789B7400224971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BACC381D789B7400224971 /* Assets.xcassets */; };
+		86BACC3C1D789B7400224971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BACC3A1D789B7400224971 /* LaunchScreen.storyboard */; };
+		86BACC451D789B7F00224971 /* VKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BACC441D789B7F00224971 /* VKCheckbox.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		86BACC291D789B7400224971 /* VKCheckboxExample-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VKCheckboxExample-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86BACC2D1D789B7400224971 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86BACC2F1D789B7400224971 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86BACC301D789B7400224971 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86BACC321D789B7400224971 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		86BACC331D789B7400224971 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		86BACC361D789B7400224971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86BACC381D789B7400224971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86BACC3B1D789B7400224971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86BACC3D1D789B7400224971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86BACC431D789B7F00224971 /* VKCheckboxExample-ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKCheckboxExample-ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		86BACC441D789B7F00224971 /* VKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VKCheckbox.swift; path = ../../VKCheckbox.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86BACC261D789B7400224971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86BACC201D789B7400224971 = {
+			isa = PBXGroup;
+			children = (
+				86BACC2B1D789B7400224971 /* VKCheckboxExample-ObjC */,
+				86BACC2A1D789B7400224971 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86BACC2A1D789B7400224971 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86BACC291D789B7400224971 /* VKCheckboxExample-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86BACC2B1D789B7400224971 /* VKCheckboxExample-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				86BACC2F1D789B7400224971 /* AppDelegate.h */,
+				86BACC301D789B7400224971 /* AppDelegate.m */,
+				86BACC321D789B7400224971 /* ViewController.h */,
+				86BACC331D789B7400224971 /* ViewController.m */,
+				86BACC351D789B7400224971 /* Main.storyboard */,
+				86BACC381D789B7400224971 /* Assets.xcassets */,
+				86BACC3A1D789B7400224971 /* LaunchScreen.storyboard */,
+				86BACC441D789B7F00224971 /* VKCheckbox.swift */,
+				86BACC3D1D789B7400224971 /* Info.plist */,
+				86BACC2C1D789B7400224971 /* Supporting Files */,
+				86BACC431D789B7F00224971 /* VKCheckboxExample-ObjC-Bridging-Header.h */,
+			);
+			path = "VKCheckboxExample-ObjC";
+			sourceTree = "<group>";
+		};
+		86BACC2C1D789B7400224971 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86BACC2D1D789B7400224971 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86BACC281D789B7400224971 /* VKCheckboxExample-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86BACC401D789B7400224971 /* Build configuration list for PBXNativeTarget "VKCheckboxExample-ObjC" */;
+			buildPhases = (
+				86BACC251D789B7400224971 /* Sources */,
+				86BACC261D789B7400224971 /* Frameworks */,
+				86BACC271D789B7400224971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VKCheckboxExample-ObjC";
+			productName = "VKCheckboxExample-ObjC";
+			productReference = 86BACC291D789B7400224971 /* VKCheckboxExample-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86BACC211D789B7400224971 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vladislav Kovalyov";
+				TargetAttributes = {
+					86BACC281D789B7400224971 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 86BACC241D789B7400224971 /* Build configuration list for PBXProject "VKCheckboxExample-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86BACC201D789B7400224971;
+			productRefGroup = 86BACC2A1D789B7400224971 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86BACC281D789B7400224971 /* VKCheckboxExample-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86BACC271D789B7400224971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86BACC3C1D789B7400224971 /* LaunchScreen.storyboard in Resources */,
+				86BACC391D789B7400224971 /* Assets.xcassets in Resources */,
+				86BACC371D789B7400224971 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86BACC251D789B7400224971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86BACC341D789B7400224971 /* ViewController.m in Sources */,
+				86BACC311D789B7400224971 /* AppDelegate.m in Sources */,
+				86BACC2E1D789B7400224971 /* main.m in Sources */,
+				86BACC451D789B7F00224971 /* VKCheckbox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		86BACC351D789B7400224971 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86BACC361D789B7400224971 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86BACC3A1D789B7400224971 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86BACC3B1D789B7400224971 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86BACC3E1D789B7400224971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		86BACC3F1D789B7400224971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86BACC411D789B7400224971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "VKCheckboxExample-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.woopss.VKCheckboxExample-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKCheckboxExample-ObjC/VKCheckboxExample-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86BACC421D789B7400224971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "VKCheckboxExample-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.woopss.VKCheckboxExample-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKCheckboxExample-ObjC/VKCheckboxExample-ObjC-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86BACC241D789B7400224971 /* Build configuration list for PBXProject "VKCheckboxExample-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86BACC3E1D789B7400224971 /* Debug */,
+				86BACC3F1D789B7400224971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86BACC401D789B7400224971 /* Build configuration list for PBXNativeTarget "VKCheckboxExample-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86BACC411D789B7400224971 /* Debug */,
+				86BACC421D789B7400224971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86BACC211D789B7400224971 /* Project object */;
+}

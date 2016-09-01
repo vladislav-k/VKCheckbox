@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="4dO-wo-6rm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Oud-Xr-gUX">
+            <objects>
+                <viewController id="4dO-wo-6rm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M08-CN-osQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pu-88-09O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QXr-fw-9PC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKCheckbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-Vl-ZI3">
+                                <rect key="frame" x="20" y="264.5" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OBA-2P-WNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example app (Obj-C)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-v0-yLk">
+                                <rect key="frame" x="20" y="294.5" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ugh-KY-RSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/vladislav-k/VKCheckbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQF-HK-rcR">
+                                <rect key="frame" x="182" y="559" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PKd-jp-gMd"/>
+                                    <constraint firstAttribute="width" constant="260" id="Y4d-1H-Vzh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_github" translatesAutoresizingMaskIntoConstraints="NO" id="j9f-jg-bNn">
+                                <rect key="frame" x="158" y="557.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="M6q-hw-Dxt"/>
+                                    <constraint firstAttribute="width" constant="24" id="RpA-AD-zyC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j9f-jg-bNn" firstAttribute="centerY" secondItem="cQF-HK-rcR" secondAttribute="centerY" id="0jN-4z-jJj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hSV-Vl-ZI3" secondAttribute="trailing" id="3V9-1L-smu"/>
+                            <constraint firstItem="OfC-v0-yLk" firstAttribute="top" secondItem="hSV-Vl-ZI3" secondAttribute="bottom" id="EcJ-s0-jrx"/>
+                            <constraint firstItem="OfC-v0-yLk" firstAttribute="leading" secondItem="QXr-fw-9PC" secondAttribute="leadingMargin" id="Pl5-85-MyE"/>
+                            <constraint firstItem="8pu-88-09O" firstAttribute="top" secondItem="cQF-HK-rcR" secondAttribute="bottom" constant="20" id="WGr-Y5-Bdl"/>
+                            <constraint firstItem="cQF-HK-rcR" firstAttribute="centerX" secondItem="QXr-fw-9PC" secondAttribute="centerX" constant="12" id="fQs-qY-Oji"/>
+                            <constraint firstItem="hSV-Vl-ZI3" firstAttribute="centerY" secondItem="QXr-fw-9PC" secondAttribute="centerY" constant="-20" id="gPD-PW-NA6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OfC-v0-yLk" secondAttribute="trailing" id="kZT-fp-Xrb"/>
+                            <constraint firstItem="hSV-Vl-ZI3" firstAttribute="leading" secondItem="QXr-fw-9PC" secondAttribute="leadingMargin" id="mN0-gE-7aV"/>
+                            <constraint firstItem="cQF-HK-rcR" firstAttribute="leading" secondItem="j9f-jg-bNn" secondAttribute="trailing" id="xYP-63-YgT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jll-ch-zfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_github" width="64" height="64"/>
+    </resources>
+</document>
