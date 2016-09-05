@@ -30,7 +30,6 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet VKCheckbox *checkbox;
-
 @end
 
 @implementation ViewController

@@ -166,10 +166,12 @@ class VKCheckbox: UIView
         
         // Setup checkmark
         self.checkmark.frame = self.bounds
+        self.checkmark.autoresizingMask = [.FlexibleWidth, .FlexibleHeight];
         self.addSubview(self.checkmark)
         
         // Setup button
         self.button.frame = self.bounds
+        self.button.autoresizingMask = [.FlexibleWidth, .FlexibleHeight];
         self.button.addTarget(self, action: #selector(VKCheckbox.buttonDidSelected), forControlEvents: .TouchUpInside)
         self.addSubview(self.button)
     }
