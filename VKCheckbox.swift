@@ -324,23 +324,21 @@ extension VKCheckmarkView
         
         self.checkmarkLayer.strokeColor = self.color.CGColor;
         self.checkmarkLayer.lineWidth   = self.strokeWidth;
-        self.layer.addSublayer(self.checkmarkLayer);
-        
-        var duration = self.animationDuration
+        self.layer.addSublayer(self.checkmarkLayer)
         
         if animated == false
         {
-            duration = 0
+            checkmarkLayer.strokeEnd = 1
+        } else {
+            let checkmarkAnimation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
+            checkmarkAnimation.duration = duration
+            checkmarkAnimation.removedOnCompletion = false
+            checkmarkAnimation.fillMode = kCAFillModeBoth
+            checkmarkAnimation.fromValue = 0
+            checkmarkAnimation.toValue = 1
+            checkmarkAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
+            self.checkmarkLayer.addAnimation(checkmarkAnimation, forKey:"strokeEnd")
         }
-        
-        let checkmarkAnimation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
-        checkmarkAnimation.duration = duration
-        checkmarkAnimation.removedOnCompletion = false
-        checkmarkAnimation.fillMode = kCAFillModeBoth
-        checkmarkAnimation.fromValue = 0
-        checkmarkAnimation.toValue = 1
-        checkmarkAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
-        self.checkmarkLayer.addAnimation(checkmarkAnimation, forKey:"strokeEnd")
     }
     
     func hide(animated: Bool)
