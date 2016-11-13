@@ -43,13 +43,13 @@ class ViewController: UIViewController
         }
         
         // Customized checkbox
-        customCheckbox.line             = .Thin
+        customCheckbox.line             = .thin
         customCheckbox.bgColorSelected  = UIColor(red: 46/255, green: 119/255, blue: 217/255, alpha: 1)
-        customCheckbox.bgColor          = UIColor.grayColor()
-        customCheckbox.color            = UIColor.whiteColor()
-        customCheckbox.borderColor      = UIColor.whiteColor()
+        customCheckbox.bgColor          = UIColor.gray
+        customCheckbox.color            = UIColor.white
+        customCheckbox.borderColor      = UIColor.white
         customCheckbox.borderWidth      = 2
-        customCheckbox.cornerRadius     = CGRectGetHeight(customCheckbox.frame) / 2
+        customCheckbox.cornerRadius     = customCheckbox.frame.height / 2
         
         // Handle custom checkbox callback
         customCheckbox.checkboxValueChangedBlock = {
@@ -62,10 +62,10 @@ class ViewController: UIViewController
 // MARK: - Actions
 extension ViewController
 {
-    @IBAction func onReset(sender: AnyObject)
+    @IBAction func onReset(_ sender: AnyObject)
     {
         self.checkbox.setOn(false)
-        self.customCheckbox.setOn(false, animated: true)
+        self.customCheckbox.setOn(!self.customCheckbox.isOn(), animated: false)
     }
     
 }
