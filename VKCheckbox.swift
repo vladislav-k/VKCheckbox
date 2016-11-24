@@ -331,7 +331,7 @@ extension VKCheckmarkView
             checkmarkLayer.strokeEnd = 1
         } else {
             let checkmarkAnimation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
-            checkmarkAnimation.duration = duration
+            checkmarkAnimation.duration = animationDuration
             checkmarkAnimation.removedOnCompletion = false
             checkmarkAnimation.fillMode = kCAFillModeBoth
             checkmarkAnimation.fromValue = 0
