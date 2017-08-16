@@ -26,12 +26,12 @@
 
 import UIKit
 
-typealias CheckboxValueChangedBlock = (isOn: Bool) -> Void
+typealias CheckboxValueChangedBlock = (_ isOn: Bool) -> Void
 
 @objc enum VKCheckboxLine: Int
 {
-    case Normal
-    case Thin
+    case normal
+    case thin
 }
 
 class VKCheckbox: UIView
@@ -43,11 +43,11 @@ class VKCheckbox: UIView
      Default value is false
      - See: isOn()
      */
-    private var on: Bool = false
+    fileprivate var on: Bool = false
     {
         didSet
         {
-            self.checkboxValueChangedBlock?(isOn: on)
+            self.checkboxValueChangedBlock?(on)
         }
     }
     
@@ -61,13 +61,13 @@ class VKCheckbox: UIView
     /**
      Set background color of checkbox
      */
-    var bgColor: UIColor = UIColor.clearColor()
+    var bgColor: UIColor = UIColor.clear
     {
         didSet
         {
             if !self.isOn()
             {
-                self.backgroundColor = bgColor
+                self.setBackground(bgColor)
             }
         }
     }
@@ -75,13 +75,13 @@ class VKCheckbox: UIView
     /**
      Set background color of checkbox in selected state
      */
-    var bgColorSelected = UIColor.clearColor()
+    var bgColorSelected = UIColor.clear
     {
         didSet
         {
             if self.isOn()
             {
-                self.backgroundColor = bgColorSelected
+                self.setBackground(bgColorSelected)
             }
         }
     }
@@ -89,7 +89,7 @@ class VKCheckbox: UIView
     /**
      Set checkmark color
      */
-    var color: UIColor = UIColor.blueColor()
+    var color: UIColor = UIColor.blue
     {
         didSet
         {
@@ -115,7 +115,7 @@ class VKCheckbox: UIView
     {
         didSet
         {
-            self.layer.borderColor = borderColor.CGColor
+            self.layer.borderColor = borderColor.cgColor
         }
     }
     
@@ -127,6 +127,7 @@ class VKCheckbox: UIView
         didSet
         {
             self.layer.cornerRadius = cornerRadius
+            self.backgroundView.layer.cornerRadius = cornerRadius
         }
     }
     
@@ -135,12 +136,13 @@ class VKCheckbox: UIView
      Default value is Normal
      - See: VKCheckboxLine enum
      */
-    var line = VKCheckboxLine.Normal
+    var line = VKCheckboxLine.normal
     
     // MARK: Private properties
     
-    private var button    = UIButton()
-    private var checkmark = VKCheckmarkView()
+    fileprivate var button      = UIButton()
+    fileprivate var checkmark   = VKCheckmarkView()
+    internal var backgroundView = UIImageView()
     
     // MARK: - Init
     override init(frame: CGRect)
@@ -155,24 +157,29 @@ class VKCheckbox: UIView
         self.setupView()
     }
     
-    private func setupView()
+    fileprivate func setupView()
     {
         // Init base properties
-        self.backgroundColor        = UIColor.clearColor()
         self.cornerRadius           = 8
         self.borderWidth            = 3
-        self.borderColor            = UIColor.darkGrayColor()
+        self.borderColor            = UIColor.darkGray
         self.color                  = UIColor(red: 46/255, green: 119/255, blue: 217/255, alpha: 1)
+        
+        self.setBackground(UIColor.clear)
+        self.backgroundView.frame = self.bounds
+        self.backgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight];
+        self.backgroundView.layer.masksToBounds = true
+        self.addSubview(self.backgroundView)
         
         // Setup checkmark
         self.checkmark.frame = self.bounds
-        self.checkmark.autoresizingMask = [.FlexibleWidth, .FlexibleHeight];
+        self.checkmark.autoresizingMask = [.flexibleWidth, .flexibleHeight];
         self.addSubview(self.checkmark)
         
         // Setup button
         self.button.frame = self.bounds
-        self.button.autoresizingMask = [.FlexibleWidth, .FlexibleHeight];
-        self.button.addTarget(self, action: #selector(VKCheckbox.buttonDidSelected), forControlEvents: .TouchUpInside)
+        self.button.autoresizingMask = [.flexibleWidth, .flexibleHeight];
+        self.button.addTarget(self, action: #selector(VKCheckbox.buttonDidSelected), for: .touchUpInside)
         self.addSubview(self.button)
     }
     
@@ -192,7 +199,7 @@ extension VKCheckbox
      Function allows you to set checkbox state
      - Parameter on Checkbox state
      */
-    func setOn(on: Bool)
+    func setOn(_ on: Bool)
     {
         self.setOn(on, animated: false)
     }
@@ -202,21 +209,21 @@ extension VKCheckbox
      - Parameter on Checkbox state
      - Parameter animated Enable anomation
      */
-    func setOn(on: Bool, animated: Bool)
+    func setOn(_ on: Bool, animated: Bool)
     {
         self.on = on
         self.showCheckmark(on, animated: animated)
         
         if animated
         {
-            UIView.animateWithDuration(0.275, animations:
+            UIView.animate(withDuration: 0.275, animations:
             {
-                self.backgroundColor = on ? self.bgColorSelected : self.bgColor
+                self.setBackground(on ? self.bgColorSelected : self.bgColor)
             })
         }
         else
         {
-            self.backgroundColor = on ? self.bgColorSelected : self.bgColor
+            self.setBackground(on ? self.bgColorSelected : self.bgColor)
         }
     }
     
@@ -228,21 +235,29 @@ extension VKCheckbox
     {
         return self.on
     }
+    
+    /// Set checkbox background color
+    ///
+    /// - Parameter backgroundColor: New color
+    internal func setBackground(_ backgroundColor: UIColor)
+    {
+        self.backgroundView.image = UIImage.from(color: backgroundColor)
+    }
 }
 
 // MARK: - Private
 extension VKCheckbox
 {
-    @objc private func buttonDidSelected()
+    @objc fileprivate func buttonDidSelected()
     {
         self.setOn(!self.on, animated: true)
     }
     
-    private func showCheckmark(show: Bool, animated: Bool)
+    fileprivate func showCheckmark(_ show: Bool, animated: Bool)
     {
         if show == true
         {
-            self.checkmark.strokeWidth = CGRectGetWidth(self.bounds) / (self.line == .Normal ? 10 : 20)
+            self.checkmark.strokeWidth = self.bounds.width / (self.line == .normal ? 10 : 20)
             self.checkmark.show(animated)
         }
         else
@@ -279,12 +294,12 @@ extension VKCheckbox
 //
 private class VKCheckmarkView: UIView
 {
-    var color: UIColor = UIColor.blueColor()
+    var color: UIColor = UIColor.blue
     
-    private var animationDuration: NSTimeInterval = 0.275
-    private var strokeWidth: CGFloat = 0
+    fileprivate var animationDuration: TimeInterval = 0.275
+    fileprivate var strokeWidth: CGFloat = 0
     
-    private var checkmarkLayer: CAShapeLayer!
+    fileprivate var checkmarkLayer: CAShapeLayer!
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -298,50 +313,50 @@ private class VKCheckmarkView: UIView
         self.setupCheckmark()
     }
     
-    private func setupCheckmark()
+    fileprivate func setupCheckmark()
     {
-        self.checkmarkLayer             = CAShapeLayer();
-        self.checkmarkLayer.fillColor   = nil;
-        
-        self.backgroundColor = UIColor.clearColor()
+        self.checkmarkLayer             = CAShapeLayer()
+        self.checkmarkLayer.fillColor   = nil
     }
 }
 
 extension VKCheckmarkView
 {
-    func show(animated: Bool)
+    func show(_ animated: Bool)
     {
         self.alpha = 1
         
         self.checkmarkLayer.removeAllAnimations()
         
-        let checkmarkPath = UIBezierPath();
-        checkmarkPath.moveToPoint(CGPointMake(CGRectGetWidth(self.bounds) * 0.28, CGRectGetHeight(self.bounds) * 0.5))
-        checkmarkPath.addLineToPoint(CGPointMake(CGRectGetWidth(self.bounds) * 0.42, CGRectGetHeight(self.bounds) * 0.66))
-        checkmarkPath.addLineToPoint(CGPointMake(CGRectGetWidth(self.bounds) * 0.72, CGRectGetHeight(self.bounds) * 0.36))
-        checkmarkPath.lineCapStyle  = .Square
-        self.checkmarkLayer.path    = checkmarkPath.CGPath;
+        let checkmarkPath = UIBezierPath()
+        checkmarkPath.move(to: CGPoint(x: self.bounds.width * 0.28, y: self.bounds.height * 0.5))
+        checkmarkPath.addLine(to: CGPoint(x: self.bounds.width * 0.42, y: self.bounds.height * 0.66))
+        checkmarkPath.addLine(to: CGPoint(x: self.bounds.width * 0.72, y: self.bounds.height * 0.36))
+        checkmarkPath.lineCapStyle  = .square
+        self.checkmarkLayer.path    = checkmarkPath.cgPath
         
-        self.checkmarkLayer.strokeColor = self.color.CGColor;
-        self.checkmarkLayer.lineWidth   = self.strokeWidth;
+        self.checkmarkLayer.strokeColor = self.color.cgColor
+        self.checkmarkLayer.lineWidth   = self.strokeWidth
         self.layer.addSublayer(self.checkmarkLayer)
         
         if animated == false
         {
             checkmarkLayer.strokeEnd = 1
-        } else {
+        }
+        else
+        {
             let checkmarkAnimation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
             checkmarkAnimation.duration = animationDuration
-            checkmarkAnimation.removedOnCompletion = false
+            checkmarkAnimation.isRemovedOnCompletion = false
             checkmarkAnimation.fillMode = kCAFillModeBoth
             checkmarkAnimation.fromValue = 0
             checkmarkAnimation.toValue = 1
             checkmarkAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
-            self.checkmarkLayer.addAnimation(checkmarkAnimation, forKey:"strokeEnd")
+            self.checkmarkLayer.add(checkmarkAnimation, forKey:"strokeEnd")
         }
     }
     
-    func hide(animated: Bool)
+    func hide(_ animated: Bool)
     {
         var duration = self.animationDuration
         
@@ -350,13 +365,28 @@ extension VKCheckmarkView
             duration = 0
         }
         
-        UIView.animateWithDuration(duration, animations:
+        UIView.animate(withDuration: duration, animations:
         {
             self.alpha = 0
-        })
-        {
+        }, completion: {
             (completed) in
             self.checkmarkLayer.removeFromSuperlayer()
-        }
+        })
+        
+    }
+}
+
+extension UIImage
+{
+    static func from(color: UIColor) -> UIImage
+    {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
     }
 }
