@@ -13,6 +13,8 @@
 		86EC78741D6AF4D900157F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EC78731D6AF4D900157F6C /* Assets.xcassets */; };
 		86EC78771D6AF4D900157F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC78751D6AF4D900157F6C /* LaunchScreen.storyboard */; };
 		86EC787F1D6AF4F600157F6C /* VKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC787E1D6AF4F600157F6C /* VKCheckbox.swift */; };
+		86FEA4741F4438B60003D2DF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FEA4731F4438B60003D2DF /* TableViewController.swift */; };
+		86FEA4761F4438C30003D2DF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FEA4751F4438C30003D2DF /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		86EC78761D6AF4D900157F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86EC78781D6AF4D900157F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86EC787E1D6AF4F600157F6C /* VKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VKCheckbox.swift; path = ../../VKCheckbox.swift; sourceTree = "<group>"; };
+		86FEA4731F4438B60003D2DF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		86FEA4751F4438C30003D2DF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				86EC786C1D6AF4D900157F6C /* AppDelegate.swift */,
-				86EC786E1D6AF4D900157F6C /* ViewController.swift */,
-				86EC787E1D6AF4F600157F6C /* VKCheckbox.swift */,
 				86EC78701D6AF4D900157F6C /* Main.storyboard */,
-				86EC78731D6AF4D900157F6C /* Assets.xcassets */,
 				86EC78751D6AF4D900157F6C /* LaunchScreen.storyboard */,
+				86EC786E1D6AF4D900157F6C /* ViewController.swift */,
+				86FEA4731F4438B60003D2DF /* TableViewController.swift */,
+				86FEA4751F4438C30003D2DF /* TableViewCell.swift */,
+				86EC787E1D6AF4F600157F6C /* VKCheckbox.swift */,
+				86EC78731D6AF4D900157F6C /* Assets.xcassets */,
 				86EC78781D6AF4D900157F6C /* Info.plist */,
 			);
 			path = VKCheckboxExample;
@@ -99,6 +105,8 @@
 				TargetAttributes = {
 					86EC78681D6AF4D900157F6C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 46LA3M9Q32;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -138,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FEA4761F4438C30003D2DF /* TableViewCell.swift in Sources */,
 				86EC786F1D6AF4D900157F6C /* ViewController.swift in Sources */,
 				86EC787F1D6AF4F600157F6C /* VKCheckbox.swift in Sources */,
 				86EC786D1D6AF4D900157F6C /* AppDelegate.swift in Sources */,
+				86FEA4741F4438B60003D2DF /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +263,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 46LA3M9Q32;
 				INFOPLIST_FILE = VKCheckboxExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woopss.VKCheckboxExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -264,10 +276,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 46LA3M9Q32;
 				INFOPLIST_FILE = VKCheckboxExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woopss.VKCheckboxExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -290,6 +304,7 @@
 				86EC787D1D6AF4D900157F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

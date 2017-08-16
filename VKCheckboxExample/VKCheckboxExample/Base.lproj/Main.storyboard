@@ -1,42 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Tv-Pg-H1C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VKCheckboxExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKCheckbox Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ2-Zv-dou">
-                                <rect key="frame" x="20" y="28" width="560" height="42"/>
+                                <rect key="frame" x="16" y="28" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Uec-fK-H7i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-BN-MuI">
-                                <rect key="frame" x="20" y="540" width="560" height="40"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.5568627451" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="558" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.5568627451" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CKP-mG-X5z"/>
                                     <constraint firstAttribute="width" constant="200" id="rVf-mH-cam"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -48,10 +54,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOZ-KB-SY4">
-                                <rect key="frame" x="20" y="86" width="560" height="219"/>
+                                <rect key="frame" x="16" y="86" width="343" height="228"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic checkbox:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elU-gp-EUF">
-                                        <rect key="frame" x="185.5" y="94" width="150" height="32"/>
+                                        <rect key="frame" x="77" y="98" width="150" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="pJp-Tl-dKx"/>
                                             <constraint firstAttribute="width" constant="150" id="tS4-PF-0VC"/>
@@ -61,15 +67,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-Sa-9yn" customClass="VKCheckbox" customModule="VKCheckboxExample" customModuleProvider="target">
-                                        <rect key="frame" x="347.5" y="93.5" width="32" height="32"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="239" y="97.5" width="32" height="32"/>
+                                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="Zih-yS-pVT"/>
                                             <constraint firstAttribute="width" constant="32" id="mFA-tP-YfS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="elU-gp-EUF" firstAttribute="centerX" secondItem="eOZ-KB-SY4" secondAttribute="centerX" constant="-20" id="Pux-3u-iPO"/>
                                     <constraint firstItem="elU-gp-EUF" firstAttribute="centerY" secondItem="eOZ-KB-SY4" secondAttribute="centerY" id="XTk-kD-sFw"/>
@@ -78,28 +84,28 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soB-xg-WHx">
-                                <rect key="frame" x="0.0" y="305" width="600" height="219"/>
+                                <rect key="frame" x="-4" y="314" width="383" height="228"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom checkbox:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJC-6S-ywi">
-                                        <rect key="frame" x="180" y="98.5" width="180" height="21"/>
+                                        <rect key="frame" x="71.5" y="103.5" width="180" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="cAC-Nu-MlF"/>
                                             <constraint firstAttribute="height" constant="21" id="wSV-pL-uQ7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnA-90-L8d" customClass="VKCheckbox" customModule="VKCheckboxExample" customModuleProvider="target">
-                                        <rect key="frame" x="368" y="83.5" width="52" height="52"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="259.5" y="88.5" width="52" height="52"/>
+                                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="52" id="TyN-b5-eM4"/>
                                             <constraint firstAttribute="height" constant="52" id="nUZ-oB-M0m"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="SJC-6S-ywi" firstAttribute="centerX" secondItem="soB-xg-WHx" secondAttribute="centerX" constant="-30" id="53r-yr-exD"/>
                                     <constraint firstItem="rnA-90-L8d" firstAttribute="leading" secondItem="SJC-6S-ywi" secondAttribute="trailing" constant="8" id="Xmy-rB-ply"/>
@@ -108,14 +114,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qf-AO-lVF">
-                                <rect key="frame" x="20" y="78" width="560" height="1"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="78" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="f9o-OP-U85"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="soB-xg-WHx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3JU-jk-6f8"/>
                             <constraint firstItem="soB-xg-WHx" firstAttribute="top" secondItem="eOZ-KB-SY4" secondAttribute="bottom" id="EIJ-jz-8V4"/>
@@ -142,14 +148,108 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="MXN-CG-cjv"/>
                     <connections>
                         <outlet property="checkbox" destination="0ep-Sa-9yn" id="dNT-5O-qL9"/>
                         <outlet property="customCheckbox" destination="rnA-90-L8d" id="mgb-mI-sJr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="243"/>
+            <point key="canvasLocation" x="868" y="-448"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yc8-pp-1L3">
+            <objects>
+                <tabBarController id="7Tv-Pg-H1C" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="31N-Cd-e32">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZYM-Is-GZa"/>
+                        <segue destination="mLU-2n-bnS" kind="relationship" relationship="viewControllers" id="mCQ-e5-QOQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUA-aY-JKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="-60"/>
+        </scene>
+        <!--TableView Demo-->
+        <scene sceneID="PWx-Tn-srR">
+            <objects>
+                <tableViewController id="lpb-4g-VlH" customClass="TableViewController" customModule="VKCheckboxExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oZy-XK-0kR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="WkE-P0-NFQ" customClass="TableViewCell" customModule="VKCheckboxExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WkE-P0-NFQ" id="GEm-zk-EFM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssw-2A-3Tb">
+                                            <rect key="frame" x="15" y="8" width="300" height="33.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-oN-C4B" customClass="VKCheckbox" customModule="VKCheckboxExample" customModuleProvider="target">
+                                            <rect key="frame" x="323" y="8" width="32" height="32"/>
+                                            <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="FgW-jf-Sfj"/>
+                                                <constraint firstAttribute="width" secondItem="Bss-oN-C4B" secondAttribute="height" multiplier="1:1" id="UMc-fZ-Iif"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Bss-oN-C4B" firstAttribute="centerY" secondItem="GEm-zk-EFM" secondAttribute="centerY" id="8Eo-ep-EeN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Bss-oN-C4B" secondAttribute="trailing" constant="20" id="AOy-Ap-Z1n"/>
+                                        <constraint firstItem="ssw-2A-3Tb" firstAttribute="top" secondItem="GEm-zk-EFM" secondAttribute="top" constant="8" id="HPU-5l-gzM"/>
+                                        <constraint firstItem="Bss-oN-C4B" firstAttribute="leading" secondItem="ssw-2A-3Tb" secondAttribute="trailing" constant="8" id="N4z-6T-kQo"/>
+                                        <constraint firstItem="ssw-2A-3Tb" firstAttribute="leading" secondItem="GEm-zk-EFM" secondAttribute="leading" constant="15" id="nML-dP-Qad"/>
+                                        <constraint firstAttribute="bottom" secondItem="ssw-2A-3Tb" secondAttribute="bottom" constant="8" id="nco-Fa-ddw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkbox" destination="Bss-oN-C4B" id="Tzk-sZ-5vL"/>
+                                    <outlet property="labelTitle" destination="ssw-2A-3Tb" id="nXz-u5-RMh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lpb-4g-VlH" id="T3m-9x-V9v"/>
+                            <outlet property="delegate" destination="lpb-4g-VlH" id="Oer-Ds-krp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TableView Demo" id="Yp5-cu-yT5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6L-Kf-V5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f2O-Ko-xzW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mLU-2n-bnS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="I3W-Tb-fg3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xKo-Jn-RgS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lpb-4g-VlH" kind="relationship" relationship="rootViewController" id="vta-e9-Ix5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLP-9D-sEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="228.93553223388307"/>
         </scene>
     </scenes>
 </document>
