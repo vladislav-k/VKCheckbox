@@ -65,7 +65,7 @@ class VKCheckbox: UIView
     {
         didSet
         {
-            if !self.isOn()
+            if !self.isOn
             {
                 self.setBackground(bgColor)
             }
@@ -79,7 +79,7 @@ class VKCheckbox: UIView
     {
         didSet
         {
-            if self.isOn()
+            if self.isOn
             {
                 self.setBackground(bgColorSelected)
             }
@@ -231,7 +231,7 @@ extension VKCheckbox
      Function allows to check current checkbox state
      - Returns: State as Bool value
      */
-    func isOn() -> Bool
+    var isOn: Bool
     {
         return self.on
     }
@@ -322,7 +322,7 @@ private class VKCheckmarkView: UIView
 
 extension VKCheckmarkView
 {
-    func show(_ animated: Bool)
+    func show(_ animated: Bool = true)
     {
         self.alpha = 1
         
@@ -348,15 +348,15 @@ extension VKCheckmarkView
             let checkmarkAnimation: CABasicAnimation = CABasicAnimation(keyPath:"strokeEnd")
             checkmarkAnimation.duration = animationDuration
             checkmarkAnimation.isRemovedOnCompletion = false
-            checkmarkAnimation.fillMode = kCAFillModeBoth
+            checkmarkAnimation.fillMode = CAMediaTimingFillMode.forwards
             checkmarkAnimation.fromValue = 0
             checkmarkAnimation.toValue = 1
-            checkmarkAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
+            checkmarkAnimation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeIn)
             self.checkmarkLayer.add(checkmarkAnimation, forKey:"strokeEnd")
         }
     }
     
-    func hide(_ animated: Bool)
+    func hide(_ animated: Bool = true)
     {
         var duration = self.animationDuration
         

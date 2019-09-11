@@ -74,7 +74,7 @@ extension TableViewController
         }
         else
         {
-            let index = self.selectedRows.index(of: indexPath.row)!
+            let index = self.selectedRows.firstIndex(of: indexPath.row)!
             self.selectedRows.remove(at: index)
         }
         
