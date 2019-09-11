@@ -13,6 +13,7 @@ To test it it, clone the repo and run it from the VKCheckboxExample directory.
 
 ## Usage
 Here is an example of custom round checkbox initialization:
+
 ```swift
 // Customized checkbox
 customCheckbox.line             = .thin
@@ -29,15 +30,16 @@ customCheckbox.checkboxValueChangedBlock = {
 	print("Custom checkbox is \(isOn ? "ON" : "OFF")")
 }
 ```
+
 Work of **VKCheckbox** is similliar to `UISwitch`. You can make it selected using next functions:
 
 ```swift
 // Change state
-func setOn(on: Bool)
-func setOn(on: Bool, animated: Bool)
+func setOn(_ on: Bool)
+func setOn(_ on: Bool, animated: Bool)
 
 // Also you can check current state with new function
-func isOn() -> Bool
+var isOn: Bool
 ```
 
 ## Author
